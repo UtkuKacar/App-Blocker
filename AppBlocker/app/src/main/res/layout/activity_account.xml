@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Başlık -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hesap Bilgileri"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Kullanıcı Bilgileri -->
+    <TextView
+        android:text="E-posta:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-posta"
+        android:enabled="false"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:text="Şifre:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Şifre"
+        android:enabled="false"
+        android:textSize="20sp"
+        android:inputType="textPassword"/>
+
+    <!-- Şifre Güncelleme Bölümü Açma Butonu -->
+    <Button
+        android:id="@+id/btnShowUpdatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Şifreyi Güncelle"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Şifre Güncelleme Alanı -->
+    <LinearLayout
+        android:id="@+id/passwordUpdateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingTop="16dp">
+
+        <EditText
+            android:id="@+id/etNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yeni Şifre"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/etConfirmNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yeni Şifre Tekrar"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Şifreyi Değiştir"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

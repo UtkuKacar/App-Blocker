@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".LoginActivity">
+
+    <!-- E-posta Giriş Alanı -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/cursive_font"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appTitle"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="60dp"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="@color/backgroundColor"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_email_hint"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Şifre Giriş Alanı -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLayout"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="@android:color/white"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Giriş Yap Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordLayout"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/login_button"
+        android:textColor="@color/primaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp" />
+
+    <!-- Hesabın Yok Mu? Yazısı -->
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/register_prompt"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+</RelativeLayout>
+

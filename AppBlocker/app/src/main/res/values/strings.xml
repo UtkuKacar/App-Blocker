@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">App Blocker</string>
+
+    <!-- Giriş Ekranı -->
+    <string name="login_button">GİRİŞ</string>
+    <string name="login_email_hint">E-posta</string>
+    <string name="login_password_hint">Şifre</string>
+    <string name="register_prompt">Hesabın yok mu? KAYIT OL</string>
+    <string name="google_login">Google ile Giriş Yap</string>
+
+    <!-- Kayıt Ekranı İçin -->
+    <string name="register_title">Kayıt Ol</string>
+    <string name="register_button">KAYIT OL</string>
+    <string name="register_email_hint">E-posta</string>
+    <string name="register_password_hint">Şifre</string>
+    <string name="login_prompt">Zaten hesabın var mı? Giriş Yap</string>
+
+    <!-- Menü Ekranı İçin -->
+    <string name="menu_account">Hesap</string>
+    <string name="menu_logout">Çıkış</string>
+</resources>

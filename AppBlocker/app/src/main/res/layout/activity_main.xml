@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ToolbarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="?attr/colorPrimary"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_background"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:hint="Ara..."
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/btnRequestPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="Gerekli İzinleri Ver" />
+
+    <!-- Yüklü uygulamaları listeleyen ListView -->
+    <ListView
+        android:id="@+id/appListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="multipleChoice"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+
+    <!-- Seçili Uygulamaları Engelle Butonu -->
+    <Button
+        android:id="@+id/btnBlockApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Seçili Uygulamaları Engelle"/>
+
+</LinearLayout>

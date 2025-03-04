@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".RegisterActivity">
+
+    <!-- Kayıt Başlığı -->
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_title"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <!-- E-posta Alanı -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerEmailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerTitle"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        app:boxBackgroundMode="filled">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/register_email_hint"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Şifre Alanı -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerEmailLayout"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        app:boxBackgroundMode="filled">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/register_password_hint"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Kayıt Ol Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerPasswordLayout"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/register_button"
+        android:textColor="@color/primaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/buttonColor"
+        app:cornerRadius="20dp" />
+
+    <!-- Giriş Yap Butonu -->
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_prompt"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
